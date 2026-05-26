@@ -218,7 +218,7 @@ function openProject(index) {
       ${items.map(item => {
         if (item.type === 'video') {
           const posterAttr = item.poster ? `poster="${item.poster}"` : '';
-          return `<div class="carousel-item"><video src="${item.src}" ${posterAttr} controls playsinline preload="metadata"></video></div>`;
+          return `<div class="carousel-item"><video src="${item.src}" ${posterAttr} controls playsinline preload="auto"></video></div>`;
         }
         return `<div class="carousel-item carousel-item--image"><img src="${item.src}" alt="${project.title}"></div>`;
       }).join('')}
@@ -235,15 +235,9 @@ function openProject(index) {
     next.addEventListener('click', () => track.scrollBy({ left: track.clientWidth * 0.85, behavior: 'smooth' }));
   }
 
-  // Random frame preview für Videos ohne expliziten Poster
-  track.querySelectorAll('video:not([poster])').forEach(v => {
-    v.addEventListener('loadedmetadata', () => {
-      v.currentTime = v.duration * (0.1 + Math.random() * 0.7);
-    }, { once: true });
-    // Beim ersten Play wieder von vorne starten
-    v.addEventListener('play', () => {
-      v.currentTime = 0;
-    }, { once: true });
+  // Videos laden ohne Seeking (GitHub Pages unterstützt Range-Requests nicht zuverlässig)
+  track.querySelectorAll('video').forEach(v => {
+    v.preload = 'auto';
   });
 
   let instagramLink = document.querySelector('.project-instagram-link');
