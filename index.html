@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thierry Stoll | Bewerbungs-Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Passwort-Gate -->
+  <div id="passwordGate" class="pw-gate">
+    <div class="pw-box">
+      <span class="logo pw-logo">Thierry<span>.</span></span>
+      <p class="eyebrow">Bewerbungs-Website</p>
+      <h2 class="pw-title">Passwort eingeben</h2>
+      <form class="pw-form" id="pwForm" autocomplete="off">
+        <input class="pw-input" type="password" id="pwInput" placeholder="••••••••••" />
+        <button class="btn primary pw-btn" type="submit">Öffnen →</button>
+      </form>
+      <p class="pw-error" id="pwError">Falsches Passwort – bitte erneut versuchen.</p>
+    </div>
+  </div>
+
+  <div class="motion-bg" aria-hidden="true"></div>
+
+  <main>
+    <section id="hero" class="hero section">
+      <div class="hero-stickers" aria-hidden="true">
+        <span class="sticker sticker-camera">🎥</span>
+        <span class="sticker sticker-spark">🪂</span>
+        <span class="sticker sticker-palette">⛰️</span>
+        
+      </div>
+
+      <a class="logo hero-logo reveal" href="#hero">Thierry<span>.</span></a>
+
+      <div class="hero-content reveal delay-1">
+        <p class="eyebrow">Gleitschirmpilot · Mediamatiker</p>
+        <h1>Willkommen auf meiner Bewerbungs-Website.</h1>
+      </div>
+    </section>
+
+    <nav class="page-nav reveal" aria-label="Seitennavigation">
+      <a href="#about">Über mich</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#why">Warum ADVANCE</a>
+      <a href="#timeline">Lebenslauf</a>
+      <a href="#contact">Kontakt</a>
+      <a href="#references">Referenzen</a>
+    </nav>
+
+
+    
+<section id="about" class="section about reveal">
+<div class="about-layout">
+<div class="about-image">
+<img src="assets/PORTRAIT_THIERRY.png" alt="Portrait Thierry Stoll">
+</div>
+
+<div class="about-content">
+  <h2 class="about-name">Thierry Stoll</h2>
+  <span class="sticker sticker-sm s-about-cam" aria-hidden="true">📸</span>
+  <p class="about-text">
+    Hey! Ich bin Thierry. Seit zwei Jahren arbeite ich in der Social Media &amp; Kommunikationsagentur Kornflex in Bern. Nun schliesse ich im Juli 2026 meine Ausbildung als Mediamatiker EFZ ab. Ich liebe es, im Bereich Foto &amp; Video zu arbeiten. Auch Graphicdesign und Animationen interessieren mich sehr. Bei Kornflex habe ich viel zum Thema Social Media, Branding &amp; Kommunikation und Content Creation gelernt, da ich von Anfang an direkt an Kundenprojekten gearbeitet habe. In meiner Freizeit bin ich immer am Fliegen ;) Seit nun einigen Jahren habe ich das Brevet und fliege 150–200 h im Jahr. Meine grosse Faszination dabei ist das Wettkampffliegen — da kann ich meine Fähigkeiten und Skills fortlaufend verbessern. Ich geniesse es, zwischen den Gipfeln der Alpen umher zu cruisen, Thermik zu drehen und zu Toplanden.
+  </p>
+</div>
+</div>
+</section>
+
+    <section id="skills" class="section reveal">
+      <div class="section-stickers" aria-hidden="true">
+        <span class="sticker sticker-sm s-skills-l">🎨</span>
+        <span class="sticker sticker-sm s-skills-r">📱</span>
+      </div>
+      <div class="section-title skills-title">
+        <p class="eyebrow">Kompetenzen</p>
+        <h2>Bereiche, in denen ich arbeiten möchte.</h2>
+      </div>
+
+      <div class="skills-list">
+        <article class="skill-row">
+          <div class="skill-number">01</div>
+          <div class="skill-main">
+            <h3>Foto & Video</h3>
+            <p>Kameraarbeit, Schnitt, Bildgestaltung, Storytelling und visuelle Produktion.</p>
+          </div>
+          <div class="skill-tag">Visual Content</div>
+        </article>
+
+        <article class="skill-row">
+          <div class="skill-number">02</div>
+          <div class="skill-main">
+            <h3>Marketing & Branding</h3>
+            <p>Markenauftritt, Kampagnenideen und visuelle Konzepte.</p>
+          </div>
+          <div class="skill-tag">Brand Identity</div>
+        </article>
+
+        <article class="skill-row">
+          <div class="skill-number">03</div>
+          <div class="skill-main">
+            <h3>Kommunikation & Social Media</h3>
+            <p>Content Ideen, Planung, Kommunikation und zielgruppengerechte Inhalte.</p>
+          </div>
+          <div class="skill-tag">Social Strategy</div>
+        </article>
+
+        <article class="skill-row">
+          <div class="skill-number">04</div>
+          <div class="skill-main">
+            <h3>Graphicdesign & Animation</h3>
+            <p>Layouts, Motion Design, Animationen, Social Posts und Graphic Design.</p>
+          </div>
+          <div class="skill-tag">Motion & Design</div>
+        </article>
+      </div>
+
+      <p class="eyebrow tools-label">Meine Lieblingsprogramme</p>
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <img class="tool-icon" src="assets/logos/DaVinci.png" alt="DaVinci Resolve">
+          <span class="tool-name">DaVinci Resolve</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon" src="assets/logos/Adobe Photoshop.png" alt="Adobe Photoshop">
+          <span class="tool-name">Photoshop</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon" src="assets/logos/Adobe XD.png" alt="Adobe XD">
+          <span class="tool-name">Adobe XD</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon" src="assets/logos/Adobe Lighroom.png" alt="Adobe Lightroom">
+          <span class="tool-name">Lightroom</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="portfolio" class="section reveal">
+      <div class="section-stickers" aria-hidden="true">
+        <span class="sticker sticker-sm s-portfolio">🎞️</span>
+      </div>
+      <div class="section-title portfolio-header">
+        <div>
+          <p class="eyebrow">Portfolio</p>
+          <h2>Meine Projekte.</h2>
+        </div>
+        <p class="section-note">Klicke auf ein Projekt, um Details und Medien zu öffnen.</p>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </section>
+
+    <section id="why" class="section why-advance reveal">
+      <div class="section-stickers" aria-hidden="true">
+        <span class="sticker sticker-sm s-process">🪂</span>
+      </div>
+      <div class="section-title">
+        <p class="eyebrow">Motivation</p>
+        <h2>Warum ADVANCE?</h2>
+      </div>
+      <div class="why-content">
+        <blockquote class="why-statement">
+          Es gibt nicht viele Firmen, bei denen ich das Gefühl habe «Da würde ich gerne Teil davon werden».<br>ADVANCE ist eine davon.
+        </blockquote>
+
+        <div class="why-letter">
+          <p class="why-letter-intro">Ciao ADVANCE-Team,</p>
+          <p>Ich bin Thierry, 19, und schliesse Ende Juli meine Lehre als Mediamatiker bei der Kornflex Agency in Bern ab. Ich kenne die Gleitschirmszene nicht nur von aussen. Während den letzten Jahren durfte ich am Projekt Chill Out Paragliding mitarbeiten, und seitdem ist für mich klar, dass ich dort weitermachen will, wo Fliegen, Storytelling und Branding zusammenkommen.</p>
+          <p>Wofür ihr mich konkret einsetzen könntet:</p>
+          <ul class="why-letter-list">
+            <li>Content Creation in Video und Foto – von Social-Media-Projekten bis zu grösseren Produktionen (z.B. Imagefilme)</li>
+            <li>Social Media, Community Management und Storytelling rund um die Marke ADVANCE</li>
+            <li>Kommunikation, Branding und Kampagnenarbeit</li>
+            <li>Motion- und Grafikdesign mit der ganzen Adobe-Palette und DaVinci Resolve</li>
+          </ul>
+          <p>Was mir bei ADVANCE besonders gefällt: Ihr baut Schirme mit einer klaren Haltung – und kommuniziert das auch so. Authentisch, hochwertig, ohne aufgesetzten Marketing-Glanz. Genau in dieser Sprache fühle ich mich zuhause. Am liebsten würde ich im Bereich Kommunikation, Branding und Content Creation einsteigen. Spannend fände ich aber auch, mal in die Produktentwicklung reinzuschauen, einfach um noch besser zu verstehen, worüber ich erzähle.</p>
+          <p>Verfügbar bin ich ab Anfang bis Mitte September. Von Wilderswil nach Thun ist es nicht weit. Über ein Gespräch würde ich mich sehr freuen, auch wenn aktuell keine passende Stelle offen ist.</p>
+          <p class="why-letter-sign">Liebe Grüsse<br><strong>Thierry Stoll</strong></p>
+        </div>
+
+        <a class="btn secondary why-pdf-btn" href="assets/Motivationsschreiben_ADVANCE_Thierry_Stoll.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v13M5 14l7 7 7-7"/><line x1="3" y1="21" x2="21" y2="21"/>
+          </svg>
+          Motivationsschreiben als PDF
+        </a>
+      </div>
+    </section>
+
+    <section class="section stats reveal">
+      <div class="section-title">
+        <p class="eyebrow">Auf einen Blick</p>
+        <h2>Zahlen & Fakten.</h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number" data-count="2" data-suffix="+">2+</span>
+          <span class="stat-label">Jahre Mediamatik</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-count="6" data-suffix="+">6+</span>
+          <span class="stat-label">Projekte</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-count="4" data-suffix="½">4½</span>
+          <span class="stat-label">Jahre Gleitschirm</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number stat-infinity">∞</span>
+          <span class="stat-label">Leidenschaft</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="section reveal">
+      <div class="section-stickers" aria-hidden="true">
+        <span class="sticker sticker-sm s-timeline">🏔️</span>
+      </div>
+      <div class="section-title">
+        <p class="eyebrow">Lebenslauf</p>
+        <h2>Meine Timeline.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item timeline-item--highlight">
+          <span class="year">ab 2026</span>
+          <div class="timeline-card">
+            <span class="timeline-tag">Zukunft</span>
+            <h3>ADVANCE Paragliders?</h3>
+            <p>Der nächste Schritt — meine Leidenschaft fürs Fliegen mit meinen Fähigkeiten in Medienproduktion, Kommunikation und Design verbinden.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2022–2026</span>
+          <div class="timeline-card">
+            <span class="timeline-tag">Ausbildung</span>
+            <h3>Mediamatiker EFZ</h3>
+            <p>Ausbildung an der BBZ mit Vertiefung in Gestaltung, Medienproduktion, Kommunikation und digitalen Tools wie Photoshop, Illustrator, InDesign, XD und DaVinci Resolve.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2025</span>
+          <div class="timeline-card">
+            <span class="timeline-tag">Arbeit</span>
+            <h3>Skischule Männlichen</h3>
+            <p>Ski Instructor sowie Aufbau und Betrieb des Social Media Auftritts. Verantwortlich für Designelemente wie Flyer und Plakate sowie Planung einer neuen Skischul-Website.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2024–2026</span>
+          <div class="timeline-card">
+            <span class="timeline-tag">Projekte</span>
+            <h3>Videoproduktion & Events</h3>
+            <p>Videocreator & Postproduction für Swiss Olympic Cool and Clean. Content Creation am Seaside Festival Spiez und an der Freestyle WM 2025 in St. Moritz.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="year">seit 2024</span>
+          <div class="timeline-card">
+            <span class="timeline-tag">Arbeit</span>
+            <h3>KORNFLEX Agency</h3>
+            <p>Mitarbeit bei der KORNFLEX Agency seit 2024.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="year">seit 2023</span>
+          <div class="timeline-card">
+            <span class="timeline-tag">Arbeit</span>
+            <h3>ChillOut Paragliding</h3>
+            <p>Camp Guide, Startleiter und Shop-Betreuung. Leitung von Weiterbildungscamps im Bereich Ski&Fly, Thermik- und Streckenflug sowie Durchführung von Privatcoachings.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2020–2022</span>
+          <div class="timeline-card">
+            <span class="timeline-tag">Engagement</span>
+            <h3>Pfadi-Leiter, Pfadi Unspunne</h3>
+            <p>Führung und Organisation von Jugendgruppen als Pfadi-Leiter bei der Pfadi Unspunne.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2019–2022</span>
+          <div class="timeline-card">
+            <span class="timeline-tag">Ausbildung</span>
+            <h3>Sekundarschule Wilderswil</h3>
+            <p>Sekundarschule in Wilderswil.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2013–2019</span>
+          <div class="timeline-card">
+            <span class="timeline-tag">Ausbildung</span>
+            <h3>Primarschule Wilderswil</h3>
+            <p>Primarschule in Wilderswil.</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-cta">
+        <a class="btn secondary why-pdf-btn" href="assets/Thierry_Stoll_Lebenslauf.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v13M5 14l7 7 7-7"/><line x1="3" y1="21" x2="21" y2="21"/>
+          </svg>
+          Lebenslauf als PDF
+        </a>
+        <a class="btn secondary why-pdf-btn" href="assets/ARBEITSZEUGNISSE/Bildungsbericht_ThierryStoll_kornflex_Semester5.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v13M5 14l7 7 7-7"/><line x1="3" y1="21" x2="21" y2="21"/>
+          </svg>
+          Bildungsbericht Semester 5
+        </a>
+        <a class="btn secondary why-pdf-btn" href="assets/ARBEITSZEUGNISSE/Bildungsbericht_ThierryStoll_kornflex_Semester6.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v13M5 14l7 7 7-7"/><line x1="3" y1="21" x2="21" y2="21"/>
+          </svg>
+          Bildungsbericht Semester 6
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact reveal">
+      <div class="section-stickers" aria-hidden="true">
+        <span class="sticker sticker-sm s-contact">✉️</span>
+      </div>
+      <p class="eyebrow">Kontakt</p>
+      <div class="contact-icons">
+
+        <a class="contact-icon-btn" href="https://www.instagram.com/thierry_st0ll/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" fill="none"/>
+            <circle cx="12" cy="12" r="5" fill="none"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+
+        <a class="contact-icon-btn" href="tel:+41799201516" aria-label="Anrufen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path fill="none" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3.5a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>Telefon</span>
+        </a>
+
+        <a class="contact-icon-btn" href="mailto:thierrystoll30@icloud.com" aria-label="E-Mail schreiben">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path fill="none" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>E-Mail</span>
+        </a>
+
+      </div>
+    </section>
+
+    <section id="references" class="section references reveal">
+      <div class="section-title">
+        <p class="eyebrow">Referenzen</p>
+        <h2>Personen, die mich kennen.</h2>
+      </div>
+      <div class="references-grid">
+
+        <div class="reference-card">
+          <div class="reference-avatar">KE</div>
+          <div class="reference-info">
+            <h3>Kari Eisenhut</h3>
+            <p class="reference-role">Gründer, Chill Out Paragliding</p>
+            <a class="reference-phone" href="tel:+41796328112">+41 79 632 81 12</a>
+          </div>
+        </div>
+
+        <div class="reference-card">
+          <div class="reference-avatar">PK</div>
+          <div class="reference-info">
+            <h3>Paddy Käser</h3>
+            <p class="reference-role">Geschäftsführer, KORNFLEX Agency</p>
+            <a class="reference-phone" href="tel:+41793818408">+41 79 381 84 08</a>
+          </div>
+        </div>
+
+      </div>
+      <a class="btn secondary contact-top-btn" href="#hero">↑ Nach oben</a>
+    </section>
+  </main>
+
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close-modal aria-label="Projekt schliessen">×</button>
+      <div class="modal-media" id="modalMedia"></div>
+      <div class="modal-body">
+        <p class="eyebrow" id="modalCategory"></p>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div class="modal-details">
+          <div><strong>Rolle</strong><span id="modalRole"></span></div>
+          <div><strong>Tools</strong><span id="modalTools"></span></div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
