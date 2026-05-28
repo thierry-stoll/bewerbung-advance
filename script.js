@@ -93,12 +93,15 @@ const projects = [
     dateLocation: 'seit 2023, Interlaken',
     instagram: 'https://www.instagram.com/chilloutparagliding/',
     mediaItems: [
-      {type:'video', src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', poster:'https://picsum.photos/600/1000?placeholder1'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder2'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder3'},
-      {type:'video', src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', poster:'https://picsum.photos/600/1000?placeholder4'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder5'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder6'}
+      {type:'image', src:'assets/PROJEKTE/CHILL_OUT/THUMBNAIL_GROUNDHANDLING_3242M.jpg'},
+      {type:'video', src:'assets/PROJEKTE/CHILL_OUT/THERMIK_BASIC.mp4'},
+      {type:'image', src:'assets/PROJEKTE/CHILL_OUT/AD_GRUNDKURS_1.jpg'},
+      {type:'image', src:'assets/PROJEKTE/CHILL_OUT/AD_GRUNDKURS_2.jpg'},
+      {type:'video', src:'assets/PROJEKTE/CHILL_OUT/RECAP_SKI_AND_FLY.mp4'},
+      {type:'image', src:'assets/PROJEKTE/CHILL_OUT/POST_TAU.jpg'},
+      {type:'video', src:'assets/PROJEKTE/CHILL_OUT/RECAP_TOPLANDINGCAMP.mp4'},
+      {type:'image', src:'assets/PROJEKTE/CHILL_OUT/POST_HF_WEEKEND_1.jpg'},
+      {type:'video', src:'assets/PROJEKTE/CHILL_OUT/POWDER_WAVE_SURFING.mp4'}
     ]
   },
   {
