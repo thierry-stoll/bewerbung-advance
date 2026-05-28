@@ -109,7 +109,7 @@ const projects = [
     media: 'assets/THUMBNAILS/SEASIDE_THUMBNAIL.jpg',
     description: '2024 war ich mit dem Kornflex-Team am Seaside Festival und habe Videoumsetzungen für Social Media und Content für den Aftermovie aufgenommen und bearbeitet.',
     role: 'Videocreator',
-    client: 'Festival & Gecko Communications',
+    client: 'GADGET',
     equipment: 'DaVinci Resolve, Sony a7iv',
     dateLocation: '2024, Spiez',
     instagram: 'https://www.instagram.com/seasidefestivalch/',
