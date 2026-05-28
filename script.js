@@ -120,6 +120,7 @@ const projects = [
     type: 'image',
     preview: 'assets/THUMBNAILS/ADELBODEN_LIVE_THUMBNAIL.jpg',
     media: 'assets/THUMBNAILS/ADELBODEN_LIVE_THUMBNAIL.jpg',
+    bgPosition: 'center bottom',
     description: '2025 war ich mit dem Kornflex-Team am Adelboden-Live Festival. Vor- und während dem Event habe ich verschiedene Videoproduktionen umgesetzt. 2026 war ich für die Screen-Animations der Festivals-Screens verantwortlich.',
     role: 'Animation',
     client: 'Adelboden Live',
@@ -171,7 +172,7 @@ projects.forEach((project, index) => {
   const card = document.createElement('button');
   card.className = 'project-card';
   card.innerHTML = `
-    <div class="project-image" style="background-image: url('${project.preview}')"></div>
+    <div class="project-image" style="background-image: url('${project.preview}'); ${project.bgPosition ? 'background-position:' + project.bgPosition : ''}"></div>
     <div class="project-info">
       <small>${project.category}</small>
       <h3>${project.title}</h3>
