@@ -1430,3 +1430,39 @@ animation: float 7s ease-in-out infinite;
   padding: 0 !important;
   border-radius: 0 !important;
 }
+
+/* Adelboden Live Thumbnail — vollflächig, Close-Button über dem Bild */
+.modal-content:has(img[src*="ADELBODEN_LIVE_THUMBNAIL"]) .modal-close {
+  position: absolute !important;
+  float: none !important;
+  top: 18px !important;
+  right: 18px !important;
+  margin: 0 !important;
+  z-index: 10;
+  background: rgba(255,255,255,.88) !important;
+  backdrop-filter: blur(8px);
+}
+
+.modal-content:has(img[src*="ADELBODEN_LIVE_THUMBNAIL"]) .modal-media,
+.modal-content:has(img[src*="ADELBODEN_LIVE_THUMBNAIL"]) #modalMedia {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  min-height: 0 !important;
+  background: #000 !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.modal-media img[src*="ADELBODEN_LIVE_THUMBNAIL"],
+#modalMedia img[src*="ADELBODEN_LIVE_THUMBNAIL"] {
+  width: 100% !important;
+  height: clamp(380px, 52vw, 640px) !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
