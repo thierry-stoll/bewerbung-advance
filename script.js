@@ -114,12 +114,10 @@ const projects = [
     dateLocation: '2024, Spiez',
     instagram: 'https://www.instagram.com/seasidefestivalch/',
     mediaItems: [
-      {type:'video', src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', poster:'https://picsum.photos/600/1000?placeholder1'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder2'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder3'},
-      {type:'video', src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', poster:'https://picsum.photos/600/1000?placeholder4'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder5'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder6'}
+      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO1.mp4'},
+      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO2.mp4'},
+      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO3.mp4'},
+      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO4.mp4'}
     ]
   },
   {
