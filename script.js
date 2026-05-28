@@ -64,12 +64,20 @@ const projects = [
     dateLocation:'2025–jetzt, Schweiz',
     instagram:'https://www.instagram.com/skischulemannlichen/',
     mediaItems: [
-      {type:'video', src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', poster:'https://picsum.photos/600/1000?placeholder1'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder2'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder3'},
-      {type:'video', src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', poster:'https://picsum.photos/600/1000?placeholder4'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder5'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder6'}
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_LOCATION-2.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_GROUP_LESSON-7.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_GROUP_LESSON-18.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_GROUP_LESSON-19.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_GROUP_LESSON-25.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_GROUP_LESSON-28.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_KIDS_COURS-4.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_KIDS_COURS-9.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_KIDS_COURS-11.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_KIDS_COURS-14.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_KIDS_COURS-17.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_KIDS_COURS-24.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_KIDS_COURS-27.jpg'},
+      {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_KIDS_COURS-31.jpg'}
     ]
   },
   {
