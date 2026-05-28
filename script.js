@@ -137,12 +137,12 @@ const projects = [
     dateLocation: '2025 · Adelboden',
     instagram: 'https://www.instagram.com/adelboden_live/',
     mediaItems: [
-      {type:'video', src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', poster:'https://picsum.photos/600/1000?placeholder1'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder2'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder3'},
-      {type:'video', src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', poster:'https://picsum.photos/600/1000?placeholder4'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder5'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder6'}
+      {type:'video', src:'assets/PROJEKTE/ADELBODEN_LIVE/ADELBODEN_LWA.mp4'},
+      {type:'video', src:'assets/PROJEKTE/ADELBODEN_LIVE/ADELBODEN_SNAPINSTA_1.mp4'},
+      {type:'video', src:'assets/PROJEKTE/ADELBODEN_LIVE/ADELBODEN_ENTWEDER_ODER.mp4'},
+      {type:'video', src:'assets/PROJEKTE/ADELBODEN_LIVE/ADELBODEN_GOELAE.mp4'},
+      {type:'video', src:'assets/PROJEKTE/ADELBODEN_LIVE/ADELBODEN_FOODMEILE.mp4'},
+      {type:'video', src:'assets/PROJEKTE/ADELBODEN_LIVE/ADELBODEN_SNAPINSTA_2.mp4'}
     ]
   },
   {
