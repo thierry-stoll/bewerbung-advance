@@ -30,25 +30,39 @@
 
 const projects = [
   {
-    title: 'Swiss Olympic «cool and clean»',
-    category: 'VIDEO',
-    type:'image',
-    preview:'assets/THUMBNAILS/SWISS_OLYMPIC_THUMBNAIL.jpg',
-    media:'assets/THUMBNAILS/SWISS_OLYMPIC_THUMBNAIL.jpg',
-    description:'Das Jugendpräventionsprogramm «cool and clean» von Swiss Olympic unterstützt Jugendteam-Leitende, die Lebens- und Gesundheitskompetenzen der Jugendlichen zu fördern, gefährliche Entwicklungen frühzeitig zu erkennen und richtig zu reagieren. Kinder und Jugendliche, die Sport treiben, sollen selbstbestimmt auf Suchtmittel verzichten und für fairen Sport einstehen können. Für «cool and clean» habe ich im Auftrag von Kornflex mehrere Videos und Grafikumsetzungen für Social Media erstellt.',
-    role:'Videocreator & Postproduction',
-    client:'Swiss Olympic / Cool and Clean',
-    equipment:'Sony a7iv, DaVinci Resolve Studio, Photoshop',
-    dateLocation:'2024–jetzt, Schweiz',
-    instagram: 'https://www.instagram.com/coolandclean/',
+    title: 'Freestyle WM 2025 St. Moritz',
+    category: 'VIDEO & SOCIAL MEDIA',
+    type: 'image',
+    preview: 'assets/THUMBNAILS/FSWM_THUMBNAIL.jpg',
+    media: 'assets/THUMBNAILS/FSWM_THUMBNAIL.jpg',
+    description: 'Zusammen mit dem Kornflex-Team haben wir 2025 sämtliche Kommunikation und Social Media für die FIS Freestyle WM in St. Moritz umgesetzt. Dazu gehörten Produktionen vor dem Event sowie Social Media Content während der Weltmeisterschaft.',
+    role: 'Video & Social Media',
+    client: 'Freestyle WM 2025 St. Moritz',
+    equipment: 'Kamera, Premiere Pro, Lightroom',
+    dateLocation: '2025 · St. Moritz',
+    instagram: 'https://www.instagram.com/stmoritz2025/',
     mediaItems: [
-      {type:'video', src:'assets/PROJEKTE/COOL_AND_CLEAN/ANDREAS_INFO_VIDEO_9_16_V2.mp4'},
-      {type:'image', src:"assets/PROJEKTE/COOL_AND_CLEAN/CnC – Don't forget to drink – Post.jpg"},
-      {type:'video', src:'assets/PROJEKTE/COOL_AND_CLEAN/CNC_ANNA_JAN26_BESSER_SCHLAFEN_9_16_V4.mp4'},
-      {type:'image', src:'assets/PROJEKTE/COOL_AND_CLEAN/Cool and Clean Supplements.jpg'},
-      {type:'video', src:'assets/PROJEKTE/COOL_AND_CLEAN/CNC_ANNA_JAN26_KLEINE_MOMENTE_9_16_V2.mp4'},
-      {type:'image', src:'assets/PROJEKTE/COOL_AND_CLEAN/Critical Thinking and Tobacco Carousel 01.jpg'},
-      {type:'video', src:'assets/PROJEKTE/COOL_AND_CLEAN/CNC_HOCKEY_WM_STACY_OPENMIC_9_16_V2.mp4'}
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_HIGHLIGHT.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_BENNETT.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_FREESTYLETRICKS.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_VIDEO_ATHLETEN_V4.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_MILKY_CHANCE.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_GIAN_ANDRI.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_STRESS.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FREESTYLE_BIG_AIR_RECAP.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_ROYAL_REPUBLIC.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_WMDIM.mp4'}
+    ],
+    mediaItems2: [
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_AUFRUF_SKICLUBS.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_SAM_FELDT.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_NE_LEICHE.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_AUFRUF_VOLUNTARI.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_VIDEO_ATHLETEN_V6.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_FREESTYLE_SCHREIEN.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_XMAS_SPECIAL.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_INFO_VOLUNTARI.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_WINTERGADGET.mp4'}
     ]
   },
   {
@@ -105,22 +119,25 @@ const projects = [
     ]
   },
   {
-    title: 'Seaside Festival',
+    title: 'Swiss Olympic «cool and clean»',
     category: 'VIDEO',
-    type: 'image',
-    preview: 'assets/THUMBNAILS/SEASIDE_THUMBNAIL.jpg',
-    media: 'assets/THUMBNAILS/SEASIDE_THUMBNAIL.jpg',
-    description: '2024 war ich mit dem Kornflex-Team am Seaside Festival und habe Videoumsetzungen für Social Media und Content für den Aftermovie aufgenommen und bearbeitet.',
-    role: 'Videocreator',
-    client: 'GADGET',
-    equipment: 'DaVinci Resolve, Sony a7iv',
-    dateLocation: '2024, Spiez',
-    instagram: 'https://www.instagram.com/seasidefestivalch/',
+    type:'image',
+    preview:'assets/THUMBNAILS/SWISS_OLYMPIC_THUMBNAIL.jpg',
+    media:'assets/THUMBNAILS/SWISS_OLYMPIC_THUMBNAIL.jpg',
+    description:'Das Jugendpräventionsprogramm «cool and clean» von Swiss Olympic unterstützt Jugendteam-Leitende, die Lebens- und Gesundheitskompetenzen der Jugendlichen zu fördern, gefährliche Entwicklungen frühzeitig zu erkennen und richtig zu reagieren. Kinder und Jugendliche, die Sport treiben, sollen selbstbestimmt auf Suchtmittel verzichten und für fairen Sport einstehen können. Für «cool and clean» habe ich im Auftrag von Kornflex mehrere Videos und Grafikumsetzungen für Social Media erstellt.',
+    role:'Videocreator & Postproduction',
+    client:'Swiss Olympic / Cool and Clean',
+    equipment:'Sony a7iv, DaVinci Resolve Studio, Photoshop',
+    dateLocation:'2024–jetzt, Schweiz',
+    instagram: 'https://www.instagram.com/coolandclean/',
     mediaItems: [
-      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO1.mp4'},
-      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO2.mp4'},
-      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO3.mp4'},
-      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO4.mp4'}
+      {type:'video', src:'assets/PROJEKTE/COOL_AND_CLEAN/ANDREAS_INFO_VIDEO_9_16_V2.mp4'},
+      {type:'image', src:"assets/PROJEKTE/COOL_AND_CLEAN/CnC – Don't forget to drink – Post.jpg"},
+      {type:'video', src:'assets/PROJEKTE/COOL_AND_CLEAN/CNC_ANNA_JAN26_BESSER_SCHLAFEN_9_16_V4.mp4'},
+      {type:'image', src:'assets/PROJEKTE/COOL_AND_CLEAN/Cool and Clean Supplements.jpg'},
+      {type:'video', src:'assets/PROJEKTE/COOL_AND_CLEAN/CNC_ANNA_JAN26_KLEINE_MOMENTE_9_16_V2.mp4'},
+      {type:'image', src:'assets/PROJEKTE/COOL_AND_CLEAN/Critical Thinking and Tobacco Carousel 01.jpg'},
+      {type:'video', src:'assets/PROJEKTE/COOL_AND_CLEAN/CNC_HOCKEY_WM_STACY_OPENMIC_9_16_V2.mp4'}
     ]
   },
   {
@@ -146,39 +163,22 @@ const projects = [
     ]
   },
   {
-    title: 'Freestyle WM 2025 St. Moritz',
-    category: 'VIDEO & SOCIAL MEDIA',
+    title: 'Seaside Festival',
+    category: 'VIDEO',
     type: 'image',
-    preview: 'assets/THUMBNAILS/FSWM_THUMBNAIL.jpg',
-    media: 'assets/THUMBNAILS/FSWM_THUMBNAIL.jpg',
-    description: 'Zusammen mit dem Kornflex-Team haben wir 2025 sämtliche Kommunikation und Social Media für die FIS Freestyle WM in St. Moritz umgesetzt. Dazu gehörten Produktionen vor dem Event sowie Social Media Content während der Weltmeisterschaft.',
-    role: 'Video & Social Media',
-    client: 'Freestyle WM 2025 St. Moritz',
-    equipment: 'Kamera, Premiere Pro, Lightroom',
-    dateLocation: '2025 · St. Moritz',
-    instagram: 'https://www.instagram.com/stmoritz2025/',
+    preview: 'assets/THUMBNAILS/SEASIDE_THUMBNAIL.jpg',
+    media: 'assets/THUMBNAILS/SEASIDE_THUMBNAIL.jpg',
+    description: '2024 war ich mit dem Kornflex-Team am Seaside Festival und habe Videoumsetzungen für Social Media und Content für den Aftermovie aufgenommen und bearbeitet.',
+    role: 'Videocreator',
+    client: 'GADGET',
+    equipment: 'DaVinci Resolve, Sony a7iv',
+    dateLocation: '2024, Spiez',
+    instagram: 'https://www.instagram.com/seasidefestivalch/',
     mediaItems: [
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_HIGHLIGHT.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_BENNETT.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_FREESTYLETRICKS.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_VIDEO_ATHLETEN_V4.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_MILKY_CHANCE.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_GIAN_ANDRI.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_STRESS.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FREESTYLE_BIG_AIR_RECAP.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_ROYAL_REPUBLIC.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_WMDIM.mp4'}
-    ],
-    mediaItems2: [
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_AUFRUF_SKICLUBS.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_SAM_FELDT.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_NE_LEICHE.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_AUFRUF_VOLUNTARI.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_VIDEO_ATHLETEN_V6.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_FREESTYLE_SCHREIEN.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_XMAS_SPECIAL.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_INFO_VOLUNTARI.mp4'},
-      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_WINTERGADGET.mp4'}
+      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO1.mp4'},
+      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO2.mp4'},
+      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO3.mp4'},
+      {type:'video', src:'assets/PROJEKTE/SEASIDE_FESTIVAL/VIDEO4.mp4'}
     ]
   }
 ];
