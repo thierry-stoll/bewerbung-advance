@@ -152,7 +152,7 @@ const projects = [
     client: 'Adelboden Live',
     equipment: 'After Effects, Illustrator',
     dateLocation: '2025 · Adelboden',
-    instagram: 'https://www.instagram.com/adelboden_live/',
+    instagram: 'https://www.instagram.com/adelbodenlive/',
     mediaItems: [
       {type:'video', src:'assets/PROJEKTE/ADELBODEN_LIVE/ADELBODEN_LWA.mp4'},
       {type:'video', src:'assets/PROJEKTE/ADELBODEN_LIVE/ADELBODEN_SNAPINSTA_1.mp4'},
