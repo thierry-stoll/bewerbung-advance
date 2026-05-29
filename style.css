@@ -966,8 +966,8 @@ h3 { letter-spacing: -0.025em; }
     mask-image: none;
   }
   .about-image img:hover { transform: scale(1.04); }
-  .about-content{ text-align: center; }
-  .about-text{ margin: 0 auto; }
+  .about-content{ text-align: left; }
+  .about-text{ margin: 0; }
   .about-role{ margin-bottom: 28px; }
 }
 
