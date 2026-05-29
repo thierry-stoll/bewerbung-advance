@@ -40,7 +40,7 @@ const projects = [
     client: 'Freestyle WM 2025 St. Moritz',
     equipment: 'Kamera, Premiere Pro, Lightroom',
     dateLocation: '2025 · St. Moritz',
-    instagram: 'https://www.instagram.com/stmoritz2025/',
+    instagram: '',
     mediaItems: [
       {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_HIGHLIGHT.mp4'},
       {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_BENNETT.mp4'},
