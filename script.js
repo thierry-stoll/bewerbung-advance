@@ -396,6 +396,33 @@ reveals.forEach(element => observer.observe(element));
 
   statEls.forEach(el => counterObserver.observe(el));
 
+  // Spezielle Animation für «4½» Gleitschirm-Stat
+  const gleitschirmEl = document.querySelector('#statGleitschirm');
+  if (gleitschirmEl && !prefersReduced) {
+    gleitschirmEl.textContent = '0';
+    const gsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const duration = 1500;
+        let startTime = null;
+        function tick(now) {
+          if (!startTime) startTime = now;
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const val = eased * 4.5;
+          // Zeige «4½» erst am Schluss, vorher ganzzahlig
+          gleitschirmEl.textContent = progress === 1 ? '4½' : Math.floor(val).toString();
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        gsObserver.unobserve(gleitschirmEl);
+      });
+    }, { threshold: 0.5 });
+    gsObserver.observe(gleitschirmEl);
+  } else if (gleitschirmEl && prefersReduced) {
+    gleitschirmEl.textContent = '4½';
+  }
+
   // Pop-in animation for the ∞ symbol
   if (infinityEl && !prefersReduced) {
     infinityEl.style.display = 'inline-block';
