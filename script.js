@@ -158,12 +158,27 @@ const projects = [
     dateLocation: '2025 · St. Moritz',
     instagram: 'https://www.instagram.com/stmoritz2025/',
     mediaItems: [
-      {type:'video', src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', poster:'https://picsum.photos/600/1000?placeholder1'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder2'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder3'},
-      {type:'video', src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', poster:'https://picsum.photos/600/1000?placeholder4'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder5'},
-      {type:'image', src:'https://picsum.photos/600/1000?placeholder6'}
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_HIGHLIGHT.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_BENNETT.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_FREESTYLETRICKS.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_VIDEO_ATHLETEN_V4.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_MILKY_CHANCE.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_GIAN_ANDRI.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_STRESS.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FREESTYLE_BIG_AIR_RECAP.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_ROYAL_REPUBLIC.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_WMDIM.mp4'}
+    ],
+    mediaItems2: [
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_AUFRUF_SKICLUBS.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_ANNOUNCE_SAM_FELDT.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_NE_LEICHE.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_AUFRUF_VOLUNTARI.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_VIDEO_ATHLETEN_V6.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_FREESTYLE_SCHREIEN.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_XMAS_SPECIAL.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_INFO_VOLUNTARI.mp4'},
+      {type:'video', src:'assets/PROJEKTE/FREESTYLE_WM/FSWM_WINTERGADGET.mp4'}
     ]
   }
 ];
@@ -245,11 +260,43 @@ function openProject(index) {
     next.addEventListener('click', () => track.scrollBy({ left: track.clientWidth * 0.85, behavior: 'smooth' }));
   }
 
-  // Videos laden ohne Seeking (GitHub Pages unterstützt Range-Requests nicht zuverlässig)
-  track.querySelectorAll('video').forEach(v => {
-    v.preload = 'auto';
-  });
+  track.querySelectorAll('video').forEach(v => { v.preload = 'auto'; });
 
+  // Zweites Carousel (nur wenn mediaItems2 vorhanden)
+  const existingCarousel2 = document.querySelector('.project-media-carousel-2');
+  if (existingCarousel2) existingCarousel2.remove();
+
+  const items2 = project.mediaItems2 || [];
+  let carousel2 = null;
+  if (items2.length > 0) {
+    carousel2 = document.createElement('div');
+    carousel2.className = 'project-media-carousel project-media-carousel-2';
+    carousel.insertAdjacentElement('afterend', carousel2);
+    carousel2.innerHTML = `
+      <button class="carousel-btn carousel-prev" type="button" aria-label="Vorheriges Medium">‹</button>
+      <div class="carousel-track">
+        ${items2.map(item => {
+          if (item.type === 'video') {
+            const posterAttr = item.poster ? `poster="${item.poster}"` : '';
+            return `<div class="carousel-item"><video src="${item.src}" ${posterAttr} controls playsinline preload="auto"></video></div>`;
+          }
+          return `<div class="carousel-item carousel-item--image"><img src="${item.src}" alt="${project.title}"></div>`;
+        }).join('')}
+      </div>
+      <button class="carousel-btn carousel-next" type="button" aria-label="Nächstes Medium">›</button>
+    `;
+    const track2 = carousel2.querySelector('.carousel-track');
+    const prev2 = carousel2.querySelector('.carousel-prev');
+    const next2 = carousel2.querySelector('.carousel-next');
+    if (prev2 && next2 && track2) {
+      prev2.addEventListener('click', () => track2.scrollBy({ left: -track2.clientWidth * 0.85, behavior: 'smooth' }));
+      next2.addEventListener('click', () => track2.scrollBy({ left: track2.clientWidth * 0.85, behavior: 'smooth' }));
+    }
+    track2.querySelectorAll('video').forEach(v => { v.preload = 'auto'; });
+  }
+
+  // Instagram-Link immer nach letztem Carousel positionieren
+  const lastCarousel = carousel2 || carousel;
   let instagramLink = document.querySelector('.project-instagram-link');
   if (!instagramLink) {
     instagramLink = document.createElement('a');
@@ -265,8 +312,8 @@ function openProject(index) {
       </svg>
       <span>Hier geht es zum Account</span>
     `;
-    carousel.insertAdjacentElement('afterend', instagramLink);
   }
+  lastCarousel.insertAdjacentElement('afterend', instagramLink);
 
   instagramLink.href = project.instagram || '#';
   instagramLink.style.display = project.instagram ? 'inline-flex' : 'none';
@@ -281,8 +328,9 @@ function closeModal() {
   modal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
   modalMedia.innerHTML = '';
-  const carousel = document.querySelector('.project-media-carousel');
-  if (carousel) carousel.innerHTML = '';
+  document.querySelectorAll('.project-media-carousel').forEach(c => c.innerHTML = '');
+  const carousel2 = document.querySelector('.project-media-carousel-2');
+  if (carousel2) carousel2.remove();
 }
 
 document.querySelectorAll('[data-close-modal]').forEach(element => {
