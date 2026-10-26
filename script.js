@@ -366,31 +366,47 @@ reveals.forEach(element => observer.observe(element));
 
   statEls.forEach(el => counterObserver.observe(el));
 
-  // Spezielle Animation für «4½» Gleitschirm-Stat
+  // Dynamische Gleitschirm-Jahre ab Jan 2022, gerundet auf Viertelschritte
+  const fracLabels = { 0: '', 0.25: '¼', 0.5: '½', 0.75: '¾' };
+  function calcParagliderYears() {
+    const start = new Date(2022, 0, 1);
+    const years = (Date.now() - start) / (1000 * 60 * 60 * 24 * 365.25);
+    return Math.floor(years * 4) / 4;
+  }
+  function formatParagliderYears(val) {
+    const whole = Math.floor(val);
+    const frac = Math.round((val - whole) * 4) / 4;
+    return whole + (fracLabels[frac] || '');
+  }
+
   const gleitschirmEl = document.querySelector('#statGleitschirm');
-  if (gleitschirmEl && !prefersReduced) {
-    gleitschirmEl.textContent = '0';
-    const gsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const duration = 1500;
-        let startTime = null;
-        function tick(now) {
-          if (!startTime) startTime = now;
-          const progress = Math.min((now - startTime) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          const val = eased * 4.5;
-          // Zeige «4½» erst am Schluss, vorher ganzzahlig
-          gleitschirmEl.textContent = progress === 1 ? '4½' : Math.floor(val).toString();
-          if (progress < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-        gsObserver.unobserve(gleitschirmEl);
-      });
-    }, { threshold: 0.5 });
-    gsObserver.observe(gleitschirmEl);
-  } else if (gleitschirmEl && prefersReduced) {
-    gleitschirmEl.textContent = '4½';
+  if (gleitschirmEl) {
+    const target = calcParagliderYears();
+    const finalText = formatParagliderYears(target);
+    if (prefersReduced) {
+      gleitschirmEl.textContent = finalText;
+    } else {
+      gleitschirmEl.textContent = '0';
+      const gsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const duration = 1500;
+          let startTime = null;
+          function tick(now) {
+            if (!startTime) startTime = now;
+            const progress = Math.min((now - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            gleitschirmEl.textContent = progress === 1
+              ? finalText
+              : Math.floor(eased * target).toString();
+            if (progress < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          gsObserver.unobserve(gleitschirmEl);
+        });
+      }, { threshold: 0.5 });
+      gsObserver.observe(gleitschirmEl);
+    }
   }
 
   // Pop-in animation for the ∞ symbol
