@@ -366,7 +366,7 @@ reveals.forEach(element => observer.observe(element));
 
   statEls.forEach(el => counterObserver.observe(el));
 
-  // Dynamische Jahre-Stats — direkt anzeigen, kein Count-up
+  // Dynamische Jahre-Stats mit Count-up Animation
   const fracLabels = { 0: '', 0.25: '¼', 0.5: '½', 0.75: '¾' };
   function calcYearsSince(startDate) {
     const years = (Date.now() - startDate) / (1000 * 60 * 60 * 24 * 365.25);
@@ -377,16 +377,34 @@ reveals.forEach(element => observer.observe(element));
     const frac = Math.round((val - whole) * 4) / 4;
     return whole + (fracLabels[frac] || '');
   }
+  function animateYearStat(el, target) {
+    const finalText = formatYears(target);
+    if (prefersReduced) { el.textContent = finalText; return; }
+    el.textContent = '0';
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const duration = 1500;
+        let startTime = null;
+        function tick(now) {
+          if (!startTime) startTime = now;
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = progress === 1 ? finalText : Math.floor(eased * target).toString();
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        obs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    obs.observe(el);
+  }
 
   const mediaDesignEl = document.querySelector('#statMediaDesign');
-  if (mediaDesignEl) {
-    mediaDesignEl.textContent = formatYears(calcYearsSince(new Date(2022, 7, 1)));
-  }
+  if (mediaDesignEl) animateYearStat(mediaDesignEl, calcYearsSince(new Date(2022, 7, 1)));
 
   const gleitschirmEl = document.querySelector('#statGleitschirm');
-  if (gleitschirmEl) {
-    gleitschirmEl.textContent = formatYears(calcYearsSince(new Date(2022, 0, 1)));
-  }
+  if (gleitschirmEl) animateYearStat(gleitschirmEl, calcYearsSince(new Date(2022, 0, 1)));
 
   // Pop-in animation for the ∞ symbol
   if (infinityEl && !prefersReduced) {
