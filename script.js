@@ -1,33 +1,3 @@
-// ── Passwort-Schutz ──────────────────────────────
-(function () {
-  const PASSWORD = 'ADVANCE2026';
-  const gate     = document.getElementById('passwordGate');
-  const form     = document.getElementById('pwForm');
-  const input    = document.getElementById('pwInput');
-  const error    = document.getElementById('pwError');
-  const box      = gate.querySelector('.pw-box');
-
-  if (sessionStorage.getItem('pw_ok') === '1') {
-    gate.classList.add('hidden');
-    return;
-  }
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (input.value === PASSWORD) {
-      sessionStorage.setItem('pw_ok', '1');
-      gate.classList.add('hidden');
-    } else {
-      error.classList.add('visible');
-      box.classList.remove('shake');
-      void box.offsetWidth; // reflow für Restart
-      box.classList.add('shake');
-      input.value = '';
-      input.focus();
-    }
-  });
-})();
-
 const projects = [
   {
     title: 'Freestyle WM 2025 St. Moritz',
