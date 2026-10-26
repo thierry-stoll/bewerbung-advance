@@ -366,80 +366,26 @@ reveals.forEach(element => observer.observe(element));
 
   statEls.forEach(el => counterObserver.observe(el));
 
-  // Dynamische Content-Creation-Jahre ab Aug 2022, gerundet auf Viertelschritte
-  const mediaDesignEl = document.querySelector('#statMediaDesign');
-  if (mediaDesignEl) {
-    const mdStart = new Date(2022, 7, 1); // Aug 1, 2022
-    const mdYears = (Date.now() - mdStart) / (1000 * 60 * 60 * 24 * 365.25);
-    const mdTarget = Math.floor(mdYears * 4) / 4;
-    const mdFinal = formatParagliderYears(mdTarget);
-    if (prefersReduced) {
-      mediaDesignEl.textContent = mdFinal;
-    } else {
-      mediaDesignEl.textContent = '0';
-      const mdObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          const duration = 1500;
-          let startTime = null;
-          function tick(now) {
-            if (!startTime) startTime = now;
-            const progress = Math.min((now - startTime) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            mediaDesignEl.textContent = progress === 1
-              ? mdFinal
-              : Math.floor(eased * mdTarget).toString();
-            if (progress < 1) requestAnimationFrame(tick);
-          }
-          requestAnimationFrame(tick);
-          mdObserver.unobserve(mediaDesignEl);
-        });
-      }, { threshold: 0.5 });
-      mdObserver.observe(mediaDesignEl);
-    }
-  }
-
-  // Dynamische Gleitschirm-Jahre ab Jan 2022, gerundet auf Viertelschritte
+  // Dynamische Jahre-Stats — direkt anzeigen, kein Count-up
   const fracLabels = { 0: '', 0.25: '¼', 0.5: '½', 0.75: '¾' };
-  function calcParagliderYears() {
-    const start = new Date(2022, 0, 1);
-    const years = (Date.now() - start) / (1000 * 60 * 60 * 24 * 365.25);
+  function calcYearsSince(startDate) {
+    const years = (Date.now() - startDate) / (1000 * 60 * 60 * 24 * 365.25);
     return Math.floor(years * 4) / 4;
   }
-  function formatParagliderYears(val) {
+  function formatYears(val) {
     const whole = Math.floor(val);
     const frac = Math.round((val - whole) * 4) / 4;
     return whole + (fracLabels[frac] || '');
   }
 
+  const mediaDesignEl = document.querySelector('#statMediaDesign');
+  if (mediaDesignEl) {
+    mediaDesignEl.textContent = formatYears(calcYearsSince(new Date(2022, 7, 1)));
+  }
+
   const gleitschirmEl = document.querySelector('#statGleitschirm');
   if (gleitschirmEl) {
-    const target = calcParagliderYears();
-    const finalText = formatParagliderYears(target);
-    if (prefersReduced) {
-      gleitschirmEl.textContent = finalText;
-    } else {
-      gleitschirmEl.textContent = '0';
-      const gsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          const duration = 1500;
-          let startTime = null;
-          function tick(now) {
-            if (!startTime) startTime = now;
-            const progress = Math.min((now - startTime) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            gleitschirmEl.textContent = progress === 1
-              ? finalText
-              : Math.floor(eased * target).toString();
-            if (progress < 1) requestAnimationFrame(tick);
-          }
-          requestAnimationFrame(tick);
-          gsObserver.unobserve(gleitschirmEl);
-        });
-      }, { threshold: 0.5 });
-      gsObserver.observe(gleitschirmEl);
-    }
+    gleitschirmEl.textContent = formatYears(calcYearsSince(new Date(2022, 0, 1)));
   }
 
   // Pop-in animation for the ∞ symbol
