@@ -5,10 +5,10 @@ const projects = [
     type: 'image',
     preview: 'assets/THUMBNAILS/FSWM_THUMBNAIL.jpg',
     media: 'assets/THUMBNAILS/FSWM_THUMBNAIL.jpg',
-    description: 'Zusammen mit dem Kornflex-Team haben wir 2025 sämtliche Kommunikation und Social Media für die FIS Freestyle WM in St. Moritz umgesetzt. Dazu gehörten Produktionen vor dem Event sowie Social Media Content während der Weltmeisterschaft.',
+    description: 'Together with the Kornflex team, we produced all communication and social media for the FIS Freestyle World Championships in St. Moritz in 2025. This included pre-event productions as well as social media content throughout the Championships.',
     role: 'Video & Social Media',
-    client: 'Freestyle WM',
-    equipment: 'Sony a7iv, DaVinci, Adobe-Palette',
+    client: 'Freestyle World Championships',
+    equipment: 'Sony a7IV, DaVinci, Adobe Suite',
     dateLocation: '2025 · St. Moritz',
     instagram: '',
     mediaItems: [
@@ -41,11 +41,11 @@ const projects = [
     type:'image',
     preview:'assets/THUMBNAILS/SKISCHULE_THUMBNAIL.jpg',
     media:'assets/THUMBNAILS/SKISCHULE_THUMBNAIL.jpg',
-    description:'Seit Wintersaison 25/26 arbeite ich bei der Skischule Männlichen als Skilehrer. Nebenbei baue und betreibe ich den Social Media Account der Skischule und bin zuständig für Designelemente wie Flyer und Plakate. Aktuell arbeite ich an einer neuen Website, welche für kommende Saison umgesetzt und in Betrieb genommen werden soll.',
-    role:'Ski Instructor, Videocreator, Branding & Kommunikation',
+    description:'Since the 2025/26 winter season I work at Skischule Männlichen as a ski instructor. I also manage their social media account and am responsible for design elements like flyers and posters. I am currently building a new website to be launched for the coming season.',
+    role:'Ski Instructor, Video Creator, Branding & Communication',
     client:'Skischule Männlichen',
-    equipment:'DaVinci, Adobe-Palette, Head Race TI',
-    dateLocation:'2025 – jetzt, Männlichen',
+    equipment:'DaVinci, Adobe Suite, Head Race TI',
+    dateLocation:'2025 – present, Männlichen',
     instagram:'https://www.instagram.com/skischulemannlichen/',
     mediaItems: [
       {type:'image', src:'assets/PROJEKTE/SKISCHULE_MAENNLICHEN/SM_LOCATION-2.jpg'},
@@ -70,11 +70,11 @@ const projects = [
     type: 'image',
     preview: 'assets/THUMBNAILS/CHILL_OUT_THUMBNAIL.jpg',
     media: 'assets/THUMBNAILS/CHILL_OUT_THUMBNAIL.jpg',
-    description: 'Ich arbeite seit 2023 bei Chill Out Paragliding als Camp Guide, Startleiter und im Chill Out Shop. Zudem bin ich zuständig für die Social Media Kanäle von Chill Out und die Kommunikation.',
-    role: 'Videocreator, Social Media, Camp Guide',
+    description: 'I have been working at Chill Out Paragliding since 2023 as a camp guide, launch director and in the Chill Out shop. I also manage their social media channels and communication.',
+    role: 'Video Creator, Social Media, Camp Guide',
     client: 'Kari Eisenhut',
-    equipment: 'DaVinci, Adobe-Palette',
-    dateLocation: 'seit 2023, Interlaken',
+    equipment: 'DaVinci, Adobe Suite',
+    dateLocation: 'since 2023, Interlaken',
     instagram: 'https://www.instagram.com/chilloutparagliding/',
     mediaItems: [
       {type:'image', src:'assets/PROJEKTE/CHILL_OUT/THUMBNAIL_GROUNDHANDLING_3242M.jpg'},
@@ -94,11 +94,11 @@ const projects = [
     type:'image',
     preview:'assets/THUMBNAILS/SWISS_OLYMPIC_THUMBNAIL.jpg',
     media:'assets/THUMBNAILS/SWISS_OLYMPIC_THUMBNAIL.jpg',
-    description:'Das Jugendpräventionsprogramm «cool and clean» von Swiss Olympic unterstützt Jugendteam-Leitende, die Lebens- und Gesundheitskompetenzen der Jugendlichen zu fördern, gefährliche Entwicklungen frühzeitig zu erkennen und richtig zu reagieren. Kinder und Jugendliche, die Sport treiben, sollen selbstbestimmt auf Suchtmittel verzichten und für fairen Sport einstehen können. Für «cool and clean» habe ich im Auftrag von Kornflex mehrere Videos und Grafikumsetzungen für Social Media erstellt.',
-    role:'Videocreator & Postproduction',
+    description:'The youth prevention programme «cool and clean» by Swiss Olympic supports youth team leaders in promoting the life and health skills of young people, recognising risky behaviour early and responding appropriately. On behalf of Kornflex, I produced several videos and graphic assets for their social media channels.',
+    role:'Video Creator & Post Production',
     client:'Swiss Olympic',
-    equipment:'Sony a7iv, DaVinci, Adobe-Palette',
-    dateLocation:'2024 – jetzt, Schweiz',
+    equipment:'Sony a7IV, DaVinci, Adobe Suite',
+    dateLocation:'2024 – present, Switzerland',
     instagram: 'https://www.instagram.com/coolandclean/',
     mediaItems: [
       {type:'video', src:'assets/PROJEKTE/COOL_AND_CLEAN/ANDREAS_INFO_VIDEO_9_16_V2.mp4'},
@@ -117,10 +117,10 @@ const projects = [
     preview: 'assets/THUMBNAILS/ADELBODEN_LIVE_THUMBNAIL.jpg',
     media: 'assets/THUMBNAILS/ADELBODEN_LIVE_THUMBNAIL.jpg',
     bgPosition: 'center bottom',
-    description: '2025 war ich mit dem Kornflex-Team am Adelboden-Live Festival. Vor- und während dem Event habe ich verschiedene Videoproduktionen umgesetzt. 2026 war ich für die Screen-Animations der Festivals-Screens verantwortlich.',
-    role: 'Video & Animation',
+    description: 'In 2025 I attended the Adelboden Live Festival with the Kornflex team, producing various videos before and during the event. In 2026 I was responsible for the motion graphics displayed on the festival screens.',
+    role: 'Video & Motion Graphics',
     client: 'Adelboden Live',
-    equipment: 'Sony a7iv, DaVinci, Adobe-Palette',
+    equipment: 'Sony a7IV, DaVinci, Adobe Suite',
     dateLocation: '2025 – 2026, Adelboden',
     instagram: 'https://www.instagram.com/adelbodenlive/',
     mediaItems: [
@@ -138,10 +138,10 @@ const projects = [
     type: 'image',
     preview: 'assets/THUMBNAILS/SEASIDE_THUMBNAIL.jpg',
     media: 'assets/THUMBNAILS/SEASIDE_THUMBNAIL.jpg',
-    description: '2024 war ich mit dem Kornflex-Team am Seaside Festival und habe Videoumsetzungen für Social Media und Content für den Aftermovie aufgenommen und bearbeitet.',
-    role: 'Videocreator',
+    description: 'In 2024 I attended the Seaside Festival with the Kornflex team, producing video content for social media and capturing footage for the aftermovie.',
+    role: 'Video Creator',
     client: 'GADGET',
-    equipment: 'Sony a7iv, DaVinci, Adobe-Palette',
+    equipment: 'Sony a7IV, DaVinci, Adobe Suite',
     dateLocation: '2024, Spiez',
     instagram: 'https://www.instagram.com/seasidefestivalch/',
     mediaItems: [
@@ -191,10 +191,10 @@ function openProject(index) {
   const details = document.querySelector('.modal-details');
   if (details) {
     details.innerHTML = `
-      <div><span>Rolle</span><strong>${project.role || ''}</strong></div>
-      <div><span>Auftraggeber</span><strong>${project.client || ''}</strong></div>
+      <div><span>Role</span><strong>${project.role || ''}</strong></div>
+      <div><span>Client</span><strong>${project.client || ''}</strong></div>
       <div><span>Equipment</span><strong>${project.equipment || project.tools || ''}</strong></div>
-      <div><span>Datum & Location</span><strong>${project.dateLocation || ''}</strong></div>
+      <div><span>Date & Location</span><strong>${project.dateLocation || ''}</strong></div>
     `;
   }
 
@@ -280,7 +280,7 @@ function openProject(index) {
         <circle cx="12" cy="12" r="4"></circle>
         <circle cx="17.4" cy="6.6" r="1"></circle>
       </svg>
-      <span>Hier geht es zum Account</span>
+      <span>View on Instagram</span>
     `;
   }
   lastCarousel.insertAdjacentElement('afterend', instagramLink);
