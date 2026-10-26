@@ -335,15 +335,16 @@ reveals.forEach(element => observer.observe(element));
   function countUp(el) {
     const target = parseInt(el.dataset.count, 10);
     const suffix = el.dataset.suffix || '';
+    const suffixFinal = el.dataset.suffixFinal !== undefined ? el.dataset.suffixFinal : suffix;
     const duration = 1500;
     let startTime = null;
 
     function tick(now) {
       if (!startTime) startTime = now;
       const progress = Math.min((now - startTime) / duration, 1);
-      // Ease-out cubic — fast start, smooth landing
       const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target) + suffix;
+      const currentSuffix = progress === 1 ? suffixFinal : suffix;
+      el.textContent = Math.round(eased * target) + currentSuffix;
       if (progress < 1) requestAnimationFrame(tick);
     }
 
