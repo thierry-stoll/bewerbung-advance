@@ -311,6 +311,25 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
 });
 
+// ── Nav active highlight ──────────────────────────────────
+(function () {
+  const navLinks = document.querySelectorAll('.page-nav a[href^="#"]');
+  const sectionIds = [...navLinks].map(a => a.getAttribute('href').slice(1));
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id;
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  sections.forEach(s => sectionObserver.observe(s));
+})();
+
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {

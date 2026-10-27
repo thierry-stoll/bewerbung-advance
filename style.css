@@ -133,6 +133,9 @@ h3 { letter-spacing: -0.025em; }
   background: rgba(255,255,255,.74);
   backdrop-filter: blur(18px);
   box-shadow: 0 14px 36px rgba(31, 27, 22, 0.06);
+  position: sticky;
+  top: 16px;
+  z-index: 100;
 }
 .page-nav a {
   color: var(--muted);
@@ -146,6 +149,10 @@ h3 { letter-spacing: -0.025em; }
   color: var(--text);
   background: var(--orange-soft);
   transform: translateY(-1px);
+}
+.page-nav a.active {
+  color: var(--orange);
+  background: var(--orange-soft);
 }
 
 .section-title {
