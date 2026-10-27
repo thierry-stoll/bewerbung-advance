@@ -793,6 +793,17 @@ h3 { letter-spacing: -0.025em; }
   align-self: flex-start;
   margin-top: 4px;
 }
+.contact-success {
+  padding: 32px;
+  background: var(--orange-soft);
+  border: 1px solid rgba(255,106,0,.2);
+  border-radius: 20px;
+  text-align: center;
+}
+.contact-success p:last-child {
+  color: var(--muted);
+  margin: 8px 0 0;
+}
 
 @media (max-width: 560px) {
   .contact-form-row { grid-template-columns: 1fr; }

@@ -311,6 +311,30 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
 });
 
+// ── Contact Form (Netlify AJAX) ───────────────────────────
+(function () {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new URLSearchParams(new FormData(form)).toString();
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data
+      });
+      form.innerHTML = `
+        <div class="contact-success">
+          <p class="eyebrow">Message sent</p>
+          <p>Thanks! I'll get back to you soon.</p>
+        </div>`;
+    } catch {
+      form.submit();
+    }
+  });
+})();
+
 // ── Preloader ─────────────────────────────────────────────
 (function () {
   const preloader = document.getElementById('preloader');
