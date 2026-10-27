@@ -311,6 +311,25 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
 });
 
+// ── Preloader ─────────────────────────────────────────────
+(function () {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+  window.addEventListener('load', () => {
+    setTimeout(() => preloader.classList.add('hidden'), 300);
+  });
+})();
+
+// ── Scroll-to-top Button ──────────────────────────────────
+(function () {
+  const btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+})();
+
 // ── Nav active highlight ──────────────────────────────────
 (function () {
   const navLinks = document.querySelectorAll('.page-nav a[href^="#"]');
